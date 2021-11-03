@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const SkillSetCard = ({ title, children, image, rect=false  }) => {
     return (
-        <div className="card flex flex-col w-96 p-3 m-2">
-            { title && <h1 className={"text-lg font-bold max-w-md"}>{ title }</h1> }
+        <div className="card flex flex-col max-w-md p-3 m-2">
+            { title && <h1 className={"text-lg font-bold"}>{ title }</h1> }
 
             <div className={"flex flex-col flex-wrap items-start mt-3 xs:flex-row xs:justify-center"}>
                 <div className={"flex flex-col items-start mt-3"}>
@@ -19,7 +19,7 @@ const SkillSetCard = ({ title, children, image, rect=false  }) => {
 
 const SkillsList = () => (
     <div id="skillList"
-         className={"flex flex-wrap w-full flex-row justify-center w-100"}>
+         className={"flex flex-col flex-wrap w-full sm:flex-row justify-center w-100"}>
 
             <SkillSetCard title={"Core Concept"} image={"Linux.png"} rect={true}>
                 <p className={"font-medium text-blue-600"}>Data Structures</p>

@@ -1,8 +1,12 @@
 import Image from 'next/image';
 
 const ExperienceCard = () => (
-    <div className={"card flex flex-col xs:w-96 items-center flex-wrap m-2 p-3"}>
-        <div className={"max-w-sm order-2 sm:order-1"}>
+    <div className={"card max-w-md flex flex-col items-center m-2 p-3"}>
+
+        <div >
+            <Image width={70} height={70} alt={"organization_logo"} src={"/images/GitHub.png"} />
+        </div>
+        <div>
             <h1 className={"font-bold text-2xl"}>GitHub</h1>
             <p className={"mt-1 text-gray-700"}>
                 <span className={"font-semibold"} >Role</span>: SDE Intern</p>
@@ -14,14 +18,12 @@ const ExperienceCard = () => (
                 Worked with GitHub Eduction Team on their product , and contributed to the mission of organization
             </p>
         </div>
-        <div className={"order-1 max-w-sm sm:order-2"}>
-            <Image width={70} height={70} alt={"organization_logo"} src={"/images/GitHub.png"} />
-        </div>
+
     </div>
 );
 
 const AchivementCard = ({ image, title, organizer, description }) => (
-    <div className={"card xs:w-96 flex flex-col flex-wrap overflow-hidden m-2"}>
+    <div className={"card max-w-md flex flex-col overflow-hidden m-2"}>
         <div className={"max-w-sm"}>
             <Image alt={"event_picture"} objectFit={"cover"}  width={"500"} height={"200"} src={`/images/achivements/${image}`} />
         </div>
@@ -54,7 +56,9 @@ export default function Experience() {
                     </svg>
                 </div>
 
-                <ExperienceCard />
+                <div id={"experienceSection"} className={"flex flex-row justify-center w-full"}>
+                    <ExperienceCard />
+                </div>
 
                 <div id={"achivementSection"} className={"flex flex-row flex-wrap justify-around max-w-5xl"}>
                     <AchivementCard
