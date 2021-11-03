@@ -13,7 +13,7 @@ export default function Contact() {
             </div>
 
             <div className={"flex flex-col mb-12"}>
-                <Image height={"200"} width={"200"} src={"/images/undraw_business_deal.svg"} />
+                <Image height={"200"} width={"200"}  alt="deal" src={"/images/undraw_business_deal.svg"} />
                 <div className={"mt-5 bg-white shadow-md rounded-xl p-3 flex flex-col items-center"}>
                     <h1 className={"font-bold text-gray-700 text-3xl text-center"}>
                         Lets discuss the problem and work on it together
@@ -31,16 +31,16 @@ export default function Contact() {
                 </h1>
                 <div className={"flex flex-row justify-center mx-3 mt-3"}>
                     <a href="https://www.linkedin.com/in/rai-roshan-962173184/" target="_blank" rel="noreferrer noopener" className={"m-1 transform ease-out duration-300 hover:scale-125 "} >
-                        <Image height={"30"} width={"30"} src={"/images/linkedin-brands.svg"} />
+                        <Image height={"30"} width={"30"} alt="linkedin" src={"/images/linkedin-brands.svg"} />
                     </a>
                     <a href={"https://github.com/rai-roshan"} target="_blank" rel="noreferrer noopener" className={"m-1 transform ease-out duration-300 hover:scale-125"} >
-                        <Image className={"m-2"} height={"30"} width={"30"} src={"/images/github-brands.svg"} />
+                        <Image className={"m-2"} height={"30"} width={"30"} alt={"github"} src={"/images/github-brands.svg"} />
                     </a>
                     <a href={"https://www.instagram.com/rai_roshan__/"} target="_blank" rel="noreferrer noopener" className={"m-1 transform ease-out duration-300 hover:scale-125"} >
-                        <Image className={"m-2"} height={"30"} width={"30"} src={"/images/instagram-brands.svg"} />
+                        <Image className={"m-2"} height={"30"} width={"30"} alt={"instagram"} src={"/images/instagram-brands.svg"} />
                     </a>
                     <a href={"mailto:roshan22037@gmail.com"} target="_blank" rel="noreferrer noopener" className={"m-1 transform ease-out duration-300 hover:scale-125"} >
-                        <Image className={"m-2"} height={"30"} width={"30"} src={"/images/envelope-solid.svg"} />
+                        <Image className={"m-2"} height={"30"} width={"30"} alt={"mail"} src={"/images/envelope-solid.svg"} />
                     </a>
                 </div>
             </footer>

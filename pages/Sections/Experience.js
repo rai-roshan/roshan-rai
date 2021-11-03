@@ -15,7 +15,7 @@ const ExperienceCard = () => (
             </p>
         </div>
         <div className={"order-1 max-w-sm sm:order-2"}>
-            <Image width={70} height={70} src={"/images/GitHub.png"} />
+            <Image width={70} height={70} alt={"organization_logo"} src={"/images/GitHub.png"} />
         </div>
     </div>
 );

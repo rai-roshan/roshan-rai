@@ -10,7 +10,7 @@ const SkillSetCard = ({ title, children, image, rect=false  }) => {
                     { children }
                 </div>
                 <div className={"mt-3 mx-4"}>
-                    { image && <Image height={ rect ? "160" : "100" } width={ rect ? "130" : "100" } objectFit={"fill"} src={`/images/${image}`} /> }
+                    { image && <Image height={ rect ? "160" : "100" } width={ rect ? "130" : "100" } objectFit={"fill"} alt={"skill_logo"} src={`/images/${image}`} /> }
                 </div>
             </div>
         </div>

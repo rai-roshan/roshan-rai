@@ -14,7 +14,7 @@ const EducationCard = ({ institute=null, degree=null, passYear=null, standard=nu
                 { duration && <p>{ duration }</p> }
             </div>
             <div className={"ml-5"}>
-                { image && <Image width={100} height={100} src={`/images/${image}`} /> }
+                { image && <Image width={100} height={100} alt={"school_logo"} src={`/images/${image}`} /> }
             </div>
         </div>
     </TimelineEvent>
@@ -36,7 +36,7 @@ export default function Education() {
         <div className={"flex flex-row flex-wrap justify-center items-center"}>
 
             <div className={"mb-5 sm:mx-10 overflow-hidden"}>
-                <Image width={"500"} height={"500"} src={"/images/undraw_education_svg.svg"} />
+                <Image width={"500"} height={"500"} alt={"school_logo"} src={"/images/undraw_education_svg.svg"} />
             </div>
 
             <div id="TimeLineContainer" className={"flex flex-col"}>
