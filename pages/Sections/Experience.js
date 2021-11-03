@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
 const ExperienceCard = () => (
-    <div className={"card max-w-md flex flex-col items-center m-2 p-3"}>
+    <div className={"card max-w-sm flex flex-col items-center m-2 p-3"}>
 
-        <div >
+        <div>
             <Image width={70} height={70} alt={"organization_logo"} src={"/images/GitHub.png"} />
         </div>
         <div>
@@ -23,12 +23,12 @@ const ExperienceCard = () => (
 );
 
 const AchivementCard = ({ image, title, organizer, description }) => (
-    <div className={"card max-w-md flex flex-col overflow-hidden m-2"}>
-        <div className={"max-w-sm"}>
+    <div className={"card max-w-sm flex flex-col overflow-hidden m-2"}>
+        <div >
             <Image alt={"event_picture"} objectFit={"cover"}  width={"500"} height={"200"} src={`/images/achivements/${image}`} />
         </div>
 
-        <div className={"max-w-sm p-3"}>
+        <div className={"p-3"}>
             <h1 className={"font-bold text-2xl"}>{title}</h1>
             <p className={"mt-1 text-gray-700"}>
                 <span className={"font-semibold"} >Organizer</span>: {organizer}

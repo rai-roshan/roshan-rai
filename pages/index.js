@@ -26,7 +26,7 @@ export default function Home() {
         <ProjectsSection />
         <ContactSection />
 
-        <NavBtn />
+        {/*<NavBtn />*/}
     </div>
   )
 }

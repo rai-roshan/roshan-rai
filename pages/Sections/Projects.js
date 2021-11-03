@@ -38,7 +38,7 @@ const ProjectCard = ({ image=null, title=null, description=null, icons=null, rep
         href={ repo_link }
         target={"_blank"}
         rel="noreferrer noopener"
-        className={"card m-2 max-w-md transform duration-300 ease-out hover:scale-105"}>
+        className={"card m-2 max-w-sm transform duration-300 ease-out hover:scale-105"}>
         <Image
             objectFit={"cover"}
             width={"500"}

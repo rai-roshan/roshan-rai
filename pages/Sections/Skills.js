@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const SkillSetCard = ({ title, children, image, rect=false  }) => {
     return (
-        <div className="card flex flex-col max-w-md p-3 m-2">
+        <div className="card flex flex-col p-3 m-2">
             { title && <h1 className={"text-lg font-bold"}>{ title }</h1> }
 
-            <div className={"flex flex-col flex-wrap items-start mt-3 xs:flex-row xs:justify-center"}>
+            <div className={"flex flex-col flex-wrap items-center mt-3 xs:flex-row justify-center"}>
                 <div className={"flex flex-col items-start mt-3"}>
                     { children }
                 </div>

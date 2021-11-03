@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const EducationCard = ({ institute=null, degree=null, passYear=null, standard=null, board=null, major=null, duration=null, image=null }) => (
     <TimelineEvent>
-        <div className="ml-5 mb-7 p-3 pt-0 shadow-lg rounded-xl bg-white flex flex-row flex-wrap justify-start">
+        <div className="ml-5 mb-7 p-3 pt-0 card max-w-sm flex flex-row flex-wrap justify-start">
             <div>
                 { institute && <h1 className={"text-xl font-bold text-gray-700"}>{institute}</h1> }
                 { degree && <p>Degree: {degree}</p> }
