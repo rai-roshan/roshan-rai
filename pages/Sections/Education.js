@@ -46,7 +46,7 @@ export default function Education() {
                     degree={"Bachelor of Engineering"}
                     major={"Information Technology"}
                     duration={"2018-2022"}
-                    image={"AIT-logo.png"}/>
+                    image={"AIT-Logo.png"}/>
                 <EducationCard
                     institute={"Army Public School"}
                     standard={"Senior Secondary (10+2)"}
