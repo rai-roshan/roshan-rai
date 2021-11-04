@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const EducationCard = ({ institute=null, degree=null, passYear=null, standard=null, board=null, major=null, duration=null, image=null }) => (
     <TimelineEvent>
-        <div className="ml-5 mb-7 p-3 pt-0 card max-w-sm flex flex-row flex-wrap justify-start">
+        <div className="ml-5 mb-7 p-5 card max-w-md flex flex-row flex-wrap justify-start">
             <div>
                 { institute && <h1 className={"text-xl font-bold text-gray-700"}>{institute}</h1> }
                 { degree && <p>Degree: {degree}</p> }
@@ -13,8 +13,8 @@ const EducationCard = ({ institute=null, degree=null, passYear=null, standard=nu
                 { major && <p>Major: { major }</p> }
                 { duration && <p>{ duration }</p> }
             </div>
-            <div className={"ml-5"}>
-                { image && <Image width={100} height={100} alt={"school_logo"} src={`/images/${image}`} /> }
+            <div className={"ml-5 max-w-sm"}>
+                { image && <Image width={80} height={80} alt={"school_logo"} src={`/images/${image}`} /> }
             </div>
         </div>
     </TimelineEvent>
@@ -34,8 +34,10 @@ export default function Education() {
         </div>
 
         <div className={"flex flex-row flex-wrap justify-center items-center"}>
-
-            <div className={"mb-5 sm:mx-10 overflow-hidden"}>
+            <div className={"mb-5 lg:hidden mb-12 overflow-hidden"}>
+                <Image width={"900"} height={"300"} alt={"school_logo"} src={"/images/undraw_graduation.svg"} />
+            </div>
+            <div className={"mr-10 hidden lg:block overflow-hidden"}>
                 <Image width={"500"} height={"500"} alt={"school_logo"} src={"/images/undraw_education_svg.svg"} />
             </div>
 

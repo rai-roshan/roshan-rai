@@ -22,7 +22,7 @@ const ExperienceCard = () => (
     </div>
 );
 
-const AchivementCard = ({ image, title, organizer, description }) => (
+const AchivementCard = ({ image, title, organizer, verdict, description }) => (
     <div className={"card max-w-sm flex flex-col overflow-hidden m-2"}>
         <div >
             <Image alt={"event_picture"} objectFit={"cover"}  width={"500"} height={"200"} src={`/images/achivements/${image}`} />
@@ -32,6 +32,9 @@ const AchivementCard = ({ image, title, organizer, description }) => (
             <h1 className={"font-bold text-2xl"}>{title}</h1>
             <p className={"mt-1 text-gray-700"}>
                 <span className={"font-semibold"} >Organizer</span>: {organizer}
+            </p>
+            <p className={"mt-1 text-gray-700"}>
+                <span className={"font-semibold"} >Verdict</span>: {verdict}
             </p>
             <p className={"text-gray-700"}>
                 <span className={"font-semibold"} >Description</span>:
@@ -65,11 +68,15 @@ export default function Experience() {
                         title={"Free Your Data Hackathon"}
                         image={"FYD_hack.jpeg"}
                         organizer={"SETU X GitHub"}
+                        verdict={"Winner"}
+                        description={"A FinTech hackathon based on Account Aggregator framework."}
                     />
                     <AchivementCard
                         title={"Smart India Hackathon"}
                         image={"SIH_hack.jpg"}
                         organizer={"Goverment of India"}
+                        verdict={"Winner"}
+                        description={"Solved the problem statement published by the Goverment of GOA."}
                     />
                 </div>
 

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Home() {
     return (
-        <div id={"home"} className="flex flex-col min-h-screen w-full items-center justify-center mt-12">
+        <div id={"home"} className="flex flex-col min-h-screen w-full items-center justify-center sm:mt-12">
           <Image 
           className="rounded-full"
           alt={"profile_pic"}
