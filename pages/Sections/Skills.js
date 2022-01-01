@@ -19,7 +19,7 @@ const SkillSetCard = ({ title, children, image, rect=false  }) => {
 
 const SkillsList = () => (
     <div id="skillList"
-         className={"flex flex-col flex-wrap w-full sm:flex-row justify-center w-100"}>
+         className={"rai-slide-in animate-delay-1 flex flex-col flex-wrap w-full sm:flex-row justify-center w-100"}>
 
             <SkillSetCard title={"Core Concept"} image={"Linux.png"} rect={true}>
                 <p className={"font-medium text-blue-600"}>Data Structures</p>
@@ -54,7 +54,7 @@ const SkillsList = () => (
 export default function Skills() {
     return (
         <div id={"skills"} className="flex flex-col min-h-screen items-center justify-center flex-wrap mb-20 sm:mb-0">
-            <div className={"flex flex-row items-center mt-12 mb-12"}>
+            <div className={"rai-slide-in flex flex-row items-center mt-12 mb-12"}>
                 <h1 className={"font-bold text-4xl  pb-2 text-blue-600 border-b-4 border-gray-500"}>
                     Skills
                 </h1>

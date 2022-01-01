@@ -50,7 +50,7 @@ export default function Experience() {
 
             <div className={"flex flex-col items-center"}>
 
-                <div className={"flex flex-row items-center mt-10 mb-12"}>
+                <div className={"rai-slide-in flex flex-row items-center mt-10 mb-12"}>
                     <h1 className={"font-bold text-4xl pb-2 text-blue-600 border-b-4 border-gray-500"}>
                         Experience
                     </h1>
@@ -59,11 +59,11 @@ export default function Experience() {
                     </svg>
                 </div>
 
-                <div id={"experienceSection"} className={"flex flex-row justify-center w-full"}>
+                <div id={"experienceSection"} className={"rai-slide-in animate-delay-1 flex flex-row justify-center w-full"}>
                     <ExperienceCard />
                 </div>
 
-                <div id={"achivementSection"} className={"flex flex-row flex-wrap justify-around max-w-5xl"}>
+                <div id={"achivementSection"} className={"rai-slide-in animate-delay-1 flex flex-row flex-wrap justify-around max-w-5xl"}>
                     <AchivementCard
                         title={"Free Your Data Hackathon"}
                         image={"FYD_hack.jpeg"}

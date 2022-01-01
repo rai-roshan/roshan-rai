@@ -22,7 +22,7 @@ const projectData = [
 ]
 
 const ProjectTitle = () => (
-    <div className={"flex flex-row items-center mt-10 mb-12"}>
+    <div className={"rai-slide-in flex flex-row items-center mt-10 mb-12"}>
         <h1 className={"font-bold text-4xl pb-2 text-blue-600 border-b-4 border-gray-500"}>
             Projects
         </h1>
@@ -58,7 +58,7 @@ export default function Projects() {
         <div id={"projects"} className="flex flex-col min-h-screen items-center py-5">
 
             <ProjectTitle />
-            <div className={"flex p-2 flex-row justify-center flex-wrap"}>
+            <div className={"rai-slide-in animate-delay-1 flex p-2 flex-row justify-center flex-wrap"}>
                 { projectData.map( (project, index) => (
                     <ProjectCard
                         key={`project_no_${index}`}

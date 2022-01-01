@@ -22,7 +22,7 @@ const EducationCard = ({ institute=null, degree=null, passYear=null, standard=nu
 
 export default function Education() {
     return <div id={"education"} className="flex flex-col min-h-screen items-center justify-center mb-20 sm:mb-0">
-        <div className={"flex flex-row items-center mb-10 mt-12"}>
+        <div className={"rai-slide-in flex flex-row items-center mb-10 mt-12"}>
             <h1 className={"font-bold text-4xl pb-2 text-blue-600 border-b-4 border-gray-500"}>
                 Education
             </h1>
@@ -33,7 +33,7 @@ export default function Education() {
             </svg>
         </div>
 
-        <div className={"flex flex-row flex-wrap justify-center items-center"}>
+        <div className={"rai-slide-in animate-delay-1 flex flex-row flex-wrap justify-center items-center"}>
             <div className={"mb-5 lg:hidden mb-12 overflow-hidden"}>
                 <Image width={"900"} height={"300"} alt={"school_logo"} src={"/images/undraw_graduation.svg"} />
             </div>
