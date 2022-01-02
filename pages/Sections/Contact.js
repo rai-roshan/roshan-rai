@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const Heading = () => (
-    <div className={"flex flex-row items-center mt-10 mb-12"}>
+    <div className={"rai-slide-in flex flex-row items-center mt-10 mb-12"}>
         <h1 className={"font-bold text-4xl pb-2 text-blue-600 border-b-4 border-gray-500"}>
             Contact
         </h1>
@@ -39,7 +39,7 @@ export default function Contact() {
 
             <Heading />
 
-            <div className={"flex flex-col mb-12"}>
+            <div className={"rai-slide-in animate-delay-1 flex flex-col mb-12"}>
                 <Image height={"200"} width={"200"}  alt="deal" src={"/images/undraw_business_deal.svg"} />
                 <div className={"mt-5 bg-white shadow-md rounded-xl p-3 flex flex-col items-center"}>
                     <h1 className={"font-bold text-gray-700 text-3xl text-center"}>
