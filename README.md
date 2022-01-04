@@ -14,6 +14,10 @@ yarn dev
 ```
 3. Now we can run the site by going to this link [http://localhost:3000](http://localhost:3000) .
 
+## Development and Contribution
+> CSS : TAILWIND CSS is used.
+>
+> ICONS : hero icons , SVG format
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
