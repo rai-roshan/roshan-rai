@@ -1,5 +1,7 @@
 import TimelineEvent from "../../components/TimelineEvent";
 import Image from 'next/image';
+import {useRef} from 'react';
+import Intersection from "../../components/Intersection";
 
 const EducationCard = ({ institute=null, degree=null, passYear=null, standard=null, board=null, major=null, duration=null, image=null }) => (
     <TimelineEvent>
@@ -21,8 +23,13 @@ const EducationCard = ({ institute=null, degree=null, passYear=null, standard=nu
 );
 
 export default function Education() {
+    const ref1 = useRef(null);
+    const ref2 = useRef(null);
+
     return <div id={"education"} className="flex flex-col min-h-screen items-center justify-center mb-20 sm:mb-0">
-        <div className={"rai-slide-in flex flex-row items-center mb-10 mt-12"}>
+
+        <Intersection element={ref1}>
+        <div ref={ref1} className={"flex flex-row items-center mb-10 mt-12"}>
             <h1 className={"font-bold text-4xl pb-2 text-blue-600 border-b-4 border-gray-500"}>
                 Education
             </h1>
@@ -32,8 +39,10 @@ export default function Education() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
             </svg>
         </div>
+        </Intersection>
 
-        <div className={"rai-slide-in animate-delay-1 flex flex-row flex-wrap justify-center items-center"}>
+        <Intersection element={ref2}>
+            <div ref={ref2} className={"animate-delay-1 flex flex-row flex-wrap justify-center items-center"}>
             <div className={"mb-5 lg:hidden mb-12 overflow-hidden"}>
                 <Image width={"900"} height={"300"} alt={"school_logo"} src={"/images/undraw_graduation.svg"} />
             </div>
@@ -66,5 +75,7 @@ export default function Education() {
             </div>
 
         </div>
-    </div>
+        </Intersection>
+
+        </div>
 } 

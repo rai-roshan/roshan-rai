@@ -35,8 +35,10 @@ body {
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
-  /*top: 4rem;*/
-  transform: translateY(60px);
+  opacity: 0;
+}
+
+.transparent {
   opacity: 0;
 }
 

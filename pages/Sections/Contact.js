@@ -1,15 +1,22 @@
 import Image from 'next/image';
+import {useRef} from 'react';
+import Intersection from "../../components/Intersection";
 
-const Heading = () => (
-    <div className={"rai-slide-in flex flex-row items-center mt-10 mb-12"}>
-        <h1 className={"font-bold text-4xl pb-2 text-blue-600 border-b-4 border-gray-500"}>
-            Contact
-        </h1>
-        <svg xmlns="http://www.w3.org/2000/svg" className="ml-3 h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-    </div>
-);
+const Heading = () => {
+    const ref = useRef(null);
+    return (
+        <Intersection element={ref}>
+        <div ref={ref} className={"flex flex-row items-center mt-10 mb-12"}>
+            <h1 className={"font-bold text-4xl pb-2 text-blue-600 border-b-4 border-gray-500"}>
+                Contact
+            </h1>
+            <svg xmlns="http://www.w3.org/2000/svg" className="ml-3 h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+        </div>
+        </Intersection>
+    );
+}
 
 const Footer = () => (
     <footer className={"w-full bg-blue-800 flex flex-col items-center p-5 mt-10"}>
@@ -34,12 +41,14 @@ const Footer = () => (
 )
 
 export default function Contact() {
+    const ref1 = useRef(null);
     return (
         <div id="contact" className="flex flex-col min-h-screen justify-between items-center pt-5">
 
             <Heading />
 
-            <div className={"rai-slide-in animate-delay-1 flex flex-col mb-12"}>
+            <Intersection element={ref1}>
+            <div ref={ref1} className={"animate-delay-1 flex flex-col mb-12"}>
                 <Image height={"200"} width={"200"}  alt="deal" src={"/images/undraw_business_deal.svg"} />
                 <div className={"mt-5 bg-white shadow-md rounded-xl p-3 flex flex-col items-center"}>
                     <h1 className={"font-bold text-gray-700 text-3xl text-center"}>
@@ -51,6 +60,7 @@ export default function Contact() {
                     </a>
                 </div>
             </div>
+            </Intersection>
 
             <Footer />
         </div>
