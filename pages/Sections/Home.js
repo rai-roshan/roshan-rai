@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Intersection from "../../components/Intersection";
+import { useRef } from 'react';
 
 const KnowMore = () => {
     return <div>
@@ -7,9 +9,16 @@ const KnowMore = () => {
 };
 
 export default function Home() {
+    const ref1 = useRef();
+    const ref2 = useRef();
+    const ref3 = useRef();
+    const ref4 = useRef();
+
     return (
         <div id={"home"} className="flex flex-col min-h-screen w-full items-center justify-center sm:mt-12">
-            <div className={"rai-slide-in"}>
+
+            <Intersection element={ref1}  >
+            <div ref={ref1} className={""}>
                 <Image
               className="rounded-full"
               alt={"profile_pic"}
@@ -17,20 +26,28 @@ export default function Home() {
               height={144}
               width={144} />
             </div>
+            </Intersection>
 
-          <h1 className="rai-slide-in animate-delay-1 text-4xl block font-extrabold text-blue-700 mt-5 sm:text-7xl">
-            👋 Hello
-          </h1>
+            <Intersection element={ref2}>
+              <h1 ref={ref2} className="animate-delay-1 text-4xl block font-extrabold text-blue-700 mt-5 sm:text-7xl">
+                👋 Hello
+              </h1>
+            </Intersection>
 
-          <h1 className="rai-slide-in animate-delay-2 title">
-            My name is Roshan Rai
-          </h1>
-          <h1 className="rai-slide-in animate-delay-2 title">
-            Information Technology 
-            <span className="mt-5 block">Final Year Student</span>
-          </h1>
+            <Intersection element={ref3}>
+                <div ref={ref3} className={"animate-delay-2"}>
+                    <h1  className="title">
+                    My name is Roshan Rai
+                  </h1>
+                    <h1 className="title">
+                        Information Technology
+                        <span className="mt-5 block">Final Year Student</span>
+                    </h1>
+                    </div>
+            </Intersection>
 
-            <div className={"rai-slide-in animate-delay-2 flex flex-row justify-center my-5"}>
+            <Intersection element={ref4}>
+                <div ref={ref4} className={"animate-delay-2 flex flex-row justify-center my-5"}>
                 <a href={"/documents/ROSHAN_RAI_RESUME.pdf"}
                    className={"p-btn flex flex-row items-center"}
                 download>
@@ -52,6 +69,8 @@ export default function Home() {
                     </svg>
                 </a>
             </div>
+            </Intersection>
+
       </div>
     );
 }
