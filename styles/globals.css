@@ -29,6 +29,9 @@ body {
 .card {
   @apply bg-white shadow-2xl rounded-lg overflow-hidden;
 }
+.menu-item {
+  @apply text-gray-700 text-xl block font-bold hover:text-blue-700 cursor-pointer mt-6;
+}
 .rai-slide-in {
   position: relative;
   animation-name: rai-slide-in;
@@ -51,6 +54,50 @@ body {
 .animate-delay-2 {
   animation-delay: 2s;
 }
+
+.full-menu {
+  position: fixed;
+  top: 100vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e0e0;
+  overflow: hidden;
+}
+
+.animate-open-full-nav {
+  animation-name: open-full-nav;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.animate-close-full-nav {
+  animation-name: close-full-nav;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes open-full-nav {
+  from {
+    top: 100vh;
+  }
+  to {
+    top: 0px;
+  }
+}
+@keyframes close-full-nav {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 100vh;
+  }
+}
+
 
 @keyframes rai-slide-in {
   from {

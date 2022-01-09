@@ -13,12 +13,12 @@ export default function Home() {
         <div id={"home"} className="flex flex-col min-h-screen w-full items-center justify-center sm:mt-12">
 
             <Intersection >
-                <Image
-              className="rounded-full"
-              alt={"profile_pic"}
-              src="/images/profile.jpg"
-              height={144}
-              width={144} />
+                <Image priority
+                  className="rounded-full"
+                  alt={"profile_pic"}
+                  src="/images/profile.jpg"
+                  height={144}
+                  width={144} />
             </Intersection>
 
             <Intersection animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
