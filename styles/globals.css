@@ -42,6 +42,9 @@ body {
   opacity: 0;
 }
 
+.animate-delay-half {
+  animation-delay: 0.5s;
+}
 .animate-delay-1 {
   animation-delay: 1s;
 }

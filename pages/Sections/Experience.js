@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import {useRef} from 'react';
 import Intersection from "../../components/Intersection";
 
 const ExperienceCard = () => (
@@ -47,16 +46,13 @@ const AchivementCard = ({ image, title, organizer, verdict, description }) => (
 );
 
 export default function Experience() {
-    const ref1 = useRef(null);
-    const ref2 = useRef(null);
-    const ref3 = useRef(null);
 
     return ( <div id="experience" className="flex flex-col min-h-screen items-center py-5">
 
             <div className={"flex flex-col items-center"}>
 
-                <Intersection element={ref1}>
-                <div ref={ref1} className={"flex flex-row items-center mt-10 mb-12"}>
+                <Intersection >
+                <div className={"flex flex-row items-center mt-10 mb-12"}>
                     <h1 className={"font-bold text-4xl pb-2 text-blue-600 border-b-4 border-gray-500"}>
                         Experience
                     </h1>
@@ -66,14 +62,15 @@ export default function Experience() {
                 </div>
                 </Intersection>
 
-                <Intersection element={ref2}>
-                <div ref={ref2} id={"experienceSection"} className={"animate-delay-1 flex flex-row justify-center w-full"}>
+                <div id={"experienceSection"} className={"flex flex-row justify-center w-full"}>
+                    <Intersection animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
                     <ExperienceCard />
+                    </Intersection>
                 </div>
-                </Intersection>
 
-                <Intersection element={ref3}>
-                <div ref={ref3} id={"achivementSection"} className={"animate-delay-1 flex flex-row flex-wrap justify-around max-w-5xl"}>
+
+                <div id={"achivementSection"} className={"flex flex-row flex-wrap justify-around max-w-5xl"}>
+                    <Intersection animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
                     <AchivementCard
                         title={"Free Your Data Hackathon"}
                         image={"FYD_hack.jpeg"}
@@ -81,6 +78,8 @@ export default function Experience() {
                         verdict={"Winner"}
                         description={"A FinTech hackathon based on Account Aggregator framework."}
                     />
+                    </Intersection>
+                    <Intersection animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
                     <AchivementCard
                         title={"Smart India Hackathon"}
                         image={"SIH_hack.jpg"}
@@ -88,8 +87,8 @@ export default function Experience() {
                         verdict={"Winner"}
                         description={"Solved the problem statement published by the Goverment of GOA."}
                     />
+                    </Intersection>
                 </div>
-                </Intersection>
 
             </div>
 

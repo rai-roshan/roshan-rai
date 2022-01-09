@@ -1,5 +1,4 @@
 import Image from "next/image";
-import {useRef} from 'react';
 import Intersection from "../../components/Intersection";
 
 const SkillSetCard = ({ title, children, image, rect=false  }) => {
@@ -20,50 +19,49 @@ const SkillSetCard = ({ title, children, image, rect=false  }) => {
 }
 
 const SkillsList = () => {
-    const ref2 = useRef();
-    return (
-        <Intersection element={ref2}>
-            <div ref={ref2} id="skillList"
-                className={"animate-delay-1 flex flex-col flex-wrap w-full sm:flex-row justify-center w-100"}>
-
-                <SkillSetCard title={"Core Concept"} image={"Linux.png"} rect={true}>
-                    <p className={"font-medium text-blue-600"}>Data Structures</p>
-                    <p className={"font-medium text-blue-600"}>Algorithms</p>
-                    <p className={"font-medium text-blue-600"}>Computer Networks</p>
-                    <p className={"font-medium text-blue-600"}>Operating System</p>
-                </SkillSetCard>
-
-                <SkillSetCard title={"Development"} image={"javascript.png"}>
-                    <p className={"font-medium text-blue-600"}>JavaScript</p>
-                    <p className={"font-medium text-blue-600"}>React JS</p>
-                    <p className={"font-medium text-blue-600"}>React Native</p>
-                    <p className={"font-medium text-blue-600"}>Next JS</p>
-                    <p className={"font-medium text-blue-600"}>Node JS</p>
-                    <p className={"font-medium text-blue-600"}>Ruby on Rails</p>
-                </SkillSetCard>
-
-                <SkillSetCard title={"DBMS"} image={"MongoDB.png"} rect={true}>
-                    <p className={"font-medium text-blue-600"}>SQL</p>
-                    <p className={"font-medium text-blue-600"}>NoSQL</p>
-                </SkillSetCard>
-
-                <SkillSetCard title={"Version Control"} image={"GitHub.png"}>
-                    <p className={"font-medium text-blue-600"}>Git</p>
-                    <p className={"font-medium text-blue-600"}>GitHub</p>
-                </SkillSetCard>
-            </div>
-        </Intersection>);
+    return ( <div id="skillList"
+                className={"flex flex-col flex-wrap w-full sm:flex-row justify-center w-100"}>
+                <Intersection animate={ { pre: "flex flex-col md:flex-row transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+                        <SkillSetCard title={"Core Concept"} image={"Linux.png"} rect={true}>
+                            <p className={"font-medium text-blue-600"}>Data Structures</p>
+                            <p className={"font-medium text-blue-600"}>Algorithms</p>
+                            <p className={"font-medium text-blue-600"}>Computer Networks</p>
+                            <p className={"font-medium text-blue-600"}>Operating System</p>
+                        </SkillSetCard>
+                </Intersection>
+                <Intersection animate={ { pre: "flex flex-col md:flex-row transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+                        <SkillSetCard title={"Development"} image={"javascript.png"}>
+                            <p className={"font-medium text-blue-600"}>JavaScript</p>
+                            <p className={"font-medium text-blue-600"}>React JS</p>
+                            <p className={"font-medium text-blue-600"}>React Native</p>
+                            <p className={"font-medium text-blue-600"}>Next JS</p>
+                            <p className={"font-medium text-blue-600"}>Node JS</p>
+                            <p className={"font-medium text-blue-600"}>Ruby on Rails</p>
+                        </SkillSetCard>
+                </Intersection>
+                <Intersection animate={ { pre: "flex flex-col md:flex-row transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+                        <SkillSetCard title={"DBMS"} image={"MongoDB.png"} rect={true}>
+                            <p className={"font-medium text-blue-600"}>SQL</p>
+                            <p className={"font-medium text-blue-600"}>NoSQL</p>
+                        </SkillSetCard>
+                </Intersection>
+                <Intersection animate={ { pre: "flex flex-col md:flex-row transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+                        <SkillSetCard title={"Version Control"} image={"GitHub.png"}>
+                            <p className={"font-medium text-blue-600"}>Git</p>
+                            <p className={"font-medium text-blue-600"}>GitHub</p>
+                        </SkillSetCard>
+                </Intersection>
+            </div>);
 };
 
 
 export default function Skills() {
-    const ref1 = useRef();
 
     return (
         <div id={"skills"} className="flex flex-col min-h-screen items-center justify-center flex-wrap mb-20 sm:mb-0">
 
-            <Intersection element={ref1} >
-            <div ref={ref1} className={"flex flex-row items-center mt-12 mb-12"}>
+            <Intersection >
+            <div className={"flex flex-row items-center mt-12 mb-12"}>
                 <h1 className={"font-bold text-4xl  pb-2 text-blue-600 border-b-4 border-gray-500"}>
                     Skills
                 </h1>
