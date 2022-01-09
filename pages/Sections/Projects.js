@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import {useRef} from 'react';
 import Intersection from "../../components/Intersection";
 
 const projectData = [
@@ -24,10 +23,9 @@ const projectData = [
 ]
 
 const ProjectTitle = () => {
-    const ref1 = useRef(null);
     return (
-        <Intersection element={ref1}>
-        <div ref={ref1} className={"flex flex-row items-center mt-10 mb-12"}>
+        <Intersection >
+        <div className={"flex flex-row items-center mt-10 mb-12"}>
             <h1 className={"font-bold text-4xl pb-2 text-blue-600 border-b-4 border-gray-500"}>
                 Projects
             </h1>
@@ -60,26 +58,27 @@ const ProjectCard = ({ image=null, title=null, description=null, icons=null, rep
 
 
 export default function Projects() {
-    const ref2 = useRef(null);
 
     return (
         <div id={"projects"} className="flex flex-col min-h-screen items-center py-5">
 
             <ProjectTitle />
 
-            <Intersection element={ref2}>
-            <div ref={ref2} className={"animate-delay-1 flex p-2 flex-row justify-center flex-wrap"}>
+            <div className={"flex p-2 flex-row justify-center flex-wrap"}>
                 { projectData.map( (project, index) => (
-                    <ProjectCard
+                    <Intersection
                         key={`project_no_${index}`}
-                        image={project.image}
-                        repo_link={project.repo_link}
-                        title={project.title}
-                        description={project.description} />
-                 ) )
+                        animate={ { pre: "flex transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+                        <ProjectCard
+                            image={project.image}
+                            repo_link={project.repo_link}
+                            title={project.title}
+                            description={project.description} />
+                    </Intersection>
+                ) )
                 }
             </div>
-            </Intersection>
+
         </div>
     )
 }

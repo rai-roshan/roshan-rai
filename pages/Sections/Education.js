@@ -1,6 +1,5 @@
 import TimelineEvent from "../../components/TimelineEvent";
 import Image from 'next/image';
-import {useRef} from 'react';
 import Intersection from "../../components/Intersection";
 
 const EducationCard = ({ institute=null, degree=null, passYear=null, standard=null, board=null, major=null, duration=null, image=null }) => (
@@ -23,13 +22,11 @@ const EducationCard = ({ institute=null, degree=null, passYear=null, standard=nu
 );
 
 export default function Education() {
-    const ref1 = useRef(null);
-    const ref2 = useRef(null);
 
     return <div id={"education"} className="flex flex-col min-h-screen items-center justify-center mb-20 sm:mb-0">
 
-        <Intersection element={ref1}>
-        <div ref={ref1} className={"flex flex-row items-center mb-10 mt-12"}>
+            <Intersection >
+        <div className={"flex flex-row items-center mb-10 mt-12"}>
             <h1 className={"font-bold text-4xl pb-2 text-blue-600 border-b-4 border-gray-500"}>
                 Education
             </h1>
@@ -41,41 +38,42 @@ export default function Education() {
         </div>
         </Intersection>
 
-        <Intersection element={ref2}>
-            <div ref={ref2} className={"animate-delay-1 flex flex-row flex-wrap justify-center items-center"}>
+            <div className={"flex flex-row flex-wrap justify-center items-center"}>
+            <Intersection animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
             <div className={"mb-5 lg:hidden mb-12 overflow-hidden"}>
                 <Image width={"900"} height={"300"} alt={"school_logo"} src={"/images/undraw_graduation.svg"} />
             </div>
             <div className={"mr-10 hidden lg:block overflow-hidden"}>
                 <Image width={"500"} height={"500"} alt={"school_logo"} src={"/images/undraw_education_svg.svg"} />
             </div>
+            </Intersection>
 
             <div id="TimeLineContainer" className={"flex flex-col"}>
-
-                <EducationCard
-                    institute={'Army Institute of Technology'}
-                    degree={"Bachelor of Engineering"}
-                    major={"Information Technology"}
-                    duration={"2018-2022"}
-                    image={"AIT-Logo.png"}/>
-                <EducationCard
-                    institute={"Army Public School"}
-                    standard={"Senior Secondary (10+2)"}
-                    board={"C.B.S.E"}
-                    passYear={"2018"}
-                    image={"APS_logo.jpg"}
-                />
-                <EducationCard
-                    institute={"Army Public School"}
-                    standard={"Secondary (10)"}
-                    board={"C.B.S.E"}
-                    passYear={"2016"}
-                    image={"APS_logo.jpg"}
-                />
+            <Intersection animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+            <EducationCard
+                institute={'Army Institute of Technology'}
+                degree={"Bachelor of Engineering"}
+                major={"Information Technology"}
+                duration={"2018-2022"}
+                image={"AIT-Logo.png"} />
+            </Intersection>
+            <Intersection animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+            <EducationCard
+                institute={"Army Public School"}
+                standard={"Senior Secondary (10+2)"}
+                board={"C.B.S.E"}
+                passYear={"2018"}
+                image={"APS_logo.jpg"} />
+            </Intersection>
+            <Intersection animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+            <EducationCard
+                institute={"Army Public School"}
+                standard={"Secondary (10)"}
+                board={"C.B.S.E"}
+                passYear={"2016"}
+                image={"APS_logo.jpg"} />
+            </Intersection>
             </div>
-
         </div>
-        </Intersection>
-
         </div>
 } 

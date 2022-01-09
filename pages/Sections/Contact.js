@@ -3,10 +3,9 @@ import {useRef} from 'react';
 import Intersection from "../../components/Intersection";
 
 const Heading = () => {
-    const ref = useRef(null);
     return (
-        <Intersection element={ref}>
-        <div ref={ref} className={"flex flex-row items-center mt-10 mb-12"}>
+        <Intersection >
+        <div className={"flex flex-row items-center mt-10 mb-12"}>
             <h1 className={"font-bold text-4xl pb-2 text-blue-600 border-b-4 border-gray-500"}>
                 Contact
             </h1>
@@ -41,14 +40,14 @@ const Footer = () => (
 )
 
 export default function Contact() {
-    const ref1 = useRef(null);
+
     return (
         <div id="contact" className="flex flex-col min-h-screen justify-between items-center pt-5">
 
             <Heading />
 
-            <Intersection element={ref1}>
-            <div ref={ref1} className={"animate-delay-1 flex flex-col mb-12"}>
+            <Intersection animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+            <div className={"flex flex-col mb-12"}>
                 <Image height={"200"} width={"200"}  alt="deal" src={"/images/undraw_business_deal.svg"} />
                 <div className={"mt-5 bg-white shadow-md rounded-xl p-3 flex flex-col items-center"}>
                     <h1 className={"font-bold text-gray-700 text-3xl text-center"}>

@@ -1,36 +1,42 @@
-import {useEffect} from 'react';
+import {useEffect, useRef} from 'react';
 
 const defaultOptions = {
     root: null,
     rootMargin: "0px",
     threshold: 0.5
 };
+const defaultAnimate = {
+    pre : "transparent",
+    animate : "rai-slide-in",
+    delay : null
+};
 
-function Intersection ( { element, options=defaultOptions, children } ) {
+function Intersection ( { options= defaultOptions,animate= defaultAnimate , children } ) {
 
+    const ref = useRef(null);
     const handleVisible = (entries, observer) => {
         entries.forEach( entry => {
            if( entry.intersectionRatio >= options.threshold ){
-               element.current.classList.add("rai-slide-in");
+               ref.current && ref.current.classList.add( animate.animate );
            }
         });
     };
 
     useEffect(()=>{
             const observer = new IntersectionObserver(handleVisible, options);
-            element.current && observer.observe(element.current);
-            element.current && element.current.classList.add("transparent");
+            ref.current && observer.observe(ref.current);
+            //ref.current && ref.current.classList.add("transparent");
 
             return () => {
                 console.log("observer unmounted");
                 // eslint-disable-next-line react-hooks/exhaustive-deps
-                observer.unobserve(element.current);
+                ref.current && observer.unobserve(ref.current);
             };
         },[]);
 
-    return <>
+    return <div ref={ref} className={ animate.pre + " " + animate.delay }>
         { children }
-    </>
+    </div>
 
 };
 
