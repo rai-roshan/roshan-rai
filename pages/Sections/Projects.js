@@ -9,10 +9,10 @@ const projectData = [
         'description' : 'MARS ROVER , in a mission to MARS we have to take our mars rover vehicle from point A to B , avoiding obstacles in between and also using fuel efficiently by finding shortest path'
     },
     {
-        'title' : 'Medic Sphere',
-        'image' : 'medic_sphere.jpg',
-        'repo_link' : 'https://github.com/rai-roshan/Medic-Sphere-Mobile',
-        'description' : 'Digitalization of medical prescriptions and tracking every medicine sold out of any Pharmacy store to prevent black marketing of medicines'
+        'title' : 'React Sorting Visualizer',
+        'image' : 'react-sort-visualizer.png',
+        'repo_link' : 'https://github.com/rai-roshan/react-sorting-visualizer',
+        'description' : 'A react application to visualize the sorting algorithm and understanding the working of various different algorithm'
     },
     {
         'title' : 'Aadhaar Anumati',
