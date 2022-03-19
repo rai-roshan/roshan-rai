@@ -16,6 +16,12 @@ body {
     background-size: 10px 10px; 
 }
 
+#space-wave {
+  position: absolute;
+  height: 100vh;
+  object-fit: cover;
+}
+
 .nav-link {
   @apply: ml-3 hover:text-blue-700;
 }

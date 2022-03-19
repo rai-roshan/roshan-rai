@@ -10,7 +10,11 @@ const KnowMore = () => {
 export default function Home() {
 
     return (
-        <div id={"home"} className="flex flex-col min-h-screen w-full items-center justify-center sm:mt-12">
+        <div id={"home"} className="flex flex-col min-h-screen w-full items-center justify-center sm:mt-11">
+
+            <video autoPlay muted loop id="space-wave" height={"100vh"}>
+                <source src="/images/MKBHD.mp4" type="video/mp4" />
+            </video>
 
             <Intersection >
                 <Image priority
