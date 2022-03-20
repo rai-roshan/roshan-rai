@@ -13,6 +13,11 @@ export default function Home() {
       <Head>
           <title>Rai Roshan :)</title>
           <meta name="description" content="Rai Roshan Software Engineer, 2022 graduate from Army Institute of Technology" />
+          <meta property="og:title" content="Rai Roshan" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.roshanrai.tech/" />
+          <meta property="og:image" content="https://drive.google.com/file/d/16ECQkfy6VqtMmkGEcLHHK2-Bi2uHkfxT/view?usp=sharing" />
+          <meta property="og:image:secure_url" content="https://drive.google.com/file/d/16ECQkfy6VqtMmkGEcLHHK2-Bi2uHkfxT/view?usp=sharing" />
           <link rel="icon" href="/favicon.ico" />
       </Head>
 
