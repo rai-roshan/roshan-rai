@@ -55,9 +55,9 @@ export default function Home() {
                               clipRule="evenodd"/>
                     </svg>
                 </a>
-                <a
-                    href={"https://github.com/rai-roshan"}
+                <a href={"https://github.com/rai-roshan"}
                     target={"_blank"}
+                    rel="noreferrer noopener"
                     className={"p-btn flex flex-row items-center"}>
                     <span>Know More</span>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
