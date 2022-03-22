@@ -23,6 +23,9 @@ const Footer = () => (
             Lets connect for opportunity or to simply drop a Hi👋
         </h1>
         <div className={"flex flex-row justify-center mx-3 mt-3"}>
+            <a href="https://twitter.com/RaiRoshan22037" target="_blank" rel="noreferrer noopener" className={"m-1 transform ease-out duration-300 hover:scale-125 "} >
+                <Image height={"30"} width={"30"} alt="twitter" src={"/images/twitter-brand.svg"} />
+            </a>
             <a href="https://www.linkedin.com/in/rai-roshan-962173184/" target="_blank" rel="noreferrer noopener" className={"m-1 transform ease-out duration-300 hover:scale-125 "} >
                 <Image height={"30"} width={"30"} alt="linkedin" src={"/images/linkedin-brands.svg"} />
             </a>
