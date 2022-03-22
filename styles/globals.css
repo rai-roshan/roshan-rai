@@ -11,7 +11,7 @@ body {
 
     scroll-behavior: smooth;
 
-    background-image: radial-gradient(#000000 5%, #ffffff 5%);
+    background-image: radial-gradient(#000000 10%, #ffffff 5%);
     background-position: 0 0;
     background-size: 10px 10px; 
 }
