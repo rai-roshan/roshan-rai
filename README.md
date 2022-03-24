@@ -21,7 +21,7 @@ yarn dev
 
 #### IntersectionObserver API :
 1. it is used to know if an element is visible in the view port or not.
-2. Intersection.js is a wrapper component which when its child component is visible by more than or equal to a threshold limit value then animation class is added to the children component.
+2. IntersectionAnimate.js is a wrapper component which when its child component is visible by more than or equal to a threshold limit value then animation class is added to the children component.
 3. [this](https://www.webtips.dev/webtips/react-hooks/element-in-viewport) articles may help you for better understanding.
 4. [API Documentation](https://www.webtips.dev/webtips/react-hooks/element-in-viewport)
 5. [sandbox animation example](https://codesandbox.io/s/useintersection-hook-forked-u51u8?file=/src/useIntersection.js)

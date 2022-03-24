@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import {useRef} from 'react';
-import Intersection from "../../components/Intersection";
+import IntersectionAnimate from "../../components/IntersectionAnimate";
 
 const Heading = () => {
     return (
-        <Intersection >
+        <IntersectionAnimate >
         <div className={"flex flex-row items-center mt-10 mb-12"}>
             <h1 className={"font-bold text-4xl pb-2 text-blue-600 border-b-4 border-gray-500"}>
                 Contact
@@ -13,7 +13,7 @@ const Heading = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
         </div>
-        </Intersection>
+        </IntersectionAnimate>
     );
 }
 
@@ -49,7 +49,7 @@ export default function Contact() {
 
             <Heading />
 
-            <Intersection animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+            <IntersectionAnimate animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
             <div className={"flex flex-col mb-12"}>
                 <Image height={"200"} width={"200"}  alt="deal" src={"/images/undraw_business_deal.svg"} />
                 <div className={"mt-5 bg-white shadow-md rounded-xl p-3 flex flex-col items-center"}>
@@ -62,7 +62,7 @@ export default function Contact() {
                     </a>
                 </div>
             </div>
-            </Intersection>
+            </IntersectionAnimate>
 
             <Footer />
         </div>

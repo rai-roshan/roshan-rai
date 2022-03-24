@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Intersection from "../../components/Intersection";
+import IntersectionAnimate from "../../components/IntersectionAnimate";
 
 const KnowMore = () => {
     return <div>
@@ -16,22 +16,22 @@ export default function Home() {
                 <source src="/images/MKBHD.mp4" type="video/mp4" />
             </video>
 
-            <Intersection >
+            <IntersectionAnimate >
                 <Image priority
                   className="rounded-full"
                   alt={"profile_pic"}
                   src="/images/profile.jpg"
                   height={144}
                   width={144} />
-            </Intersection>
+            </IntersectionAnimate>
 
-            <Intersection animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+            <IntersectionAnimate animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
               <h1 className="text-4xl block font-extrabold text-blue-700 mt-5 sm:text-7xl">
                 👋 Hello
               </h1>
-            </Intersection>
+            </IntersectionAnimate>
 
-            <Intersection animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-1" } }>
+            <IntersectionAnimate animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-1" } }>
                 <div>
                     <h1  className="title">
                     My name is Roshan Rai
@@ -41,9 +41,9 @@ export default function Home() {
                         <span className="mt-5 block">Final Year Student</span>
                     </h1>
                 </div>
-            </Intersection>
+            </IntersectionAnimate>
 
-            <Intersection animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-1" } }>
+            <IntersectionAnimate animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-1" } }>
                 <div className={"flex flex-row justify-center my-5"}>
                 <a href={"/documents/ROSHAN_RAI_RESUME.pdf"}
                    className={"p-btn flex flex-row items-center"}
@@ -67,7 +67,7 @@ export default function Home() {
                     </svg>
                 </a>
             </div>
-            </Intersection>
+            </IntersectionAnimate>
 
       </div>
     );
