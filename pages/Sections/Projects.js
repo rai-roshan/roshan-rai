@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Intersection from "../../components/Intersection";
+import IntersectionAnimate from "../../components/Intersection";
 
 const projectData = [
     {
@@ -24,7 +24,7 @@ const projectData = [
 
 const ProjectTitle = () => {
     return (
-        <Intersection >
+        <IntersectionAnimate >
         <div className={"flex flex-row items-center mt-10 mb-12"}>
             <h1 className={"font-bold text-4xl pb-2 text-blue-600 border-b-4 border-gray-500"}>
                 Projects
@@ -34,7 +34,7 @@ const ProjectTitle = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
         </div>
-        </Intersection>
+        </IntersectionAnimate>
     );
 };
 
@@ -66,7 +66,7 @@ export default function Projects() {
 
             <div className={"flex p-2 flex-row justify-center flex-wrap"}>
                 { projectData.map( (project, index) => (
-                    <Intersection
+                    <IntersectionAnimate
                         key={`project_no_${index}`}
                         animate={ { pre: "flex transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
                         <ProjectCard
@@ -74,7 +74,7 @@ export default function Projects() {
                             repo_link={project.repo_link}
                             title={project.title}
                             description={project.description} />
-                    </Intersection>
+                    </IntersectionAnimate>
                 ) )
                 }
             </div>

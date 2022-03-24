@@ -1,4 +1,4 @@
-import Intersection from "../../components/Intersection";
+import IntersectionAnimate from "../../components/Intersection";
 
 export default function Gift() {
 
