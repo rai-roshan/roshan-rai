@@ -11,7 +11,7 @@ const defaultAnimate = {
     delay : null
 };
 
-function Intersection ( { options= defaultOptions,animate= defaultAnimate , children } ) {
+function IntersectionAnimate ({ options= defaultOptions,animate= defaultAnimate , children } ) {
 
     const ref = useRef(null);
     const handleVisible = (entries, observer) => {
@@ -43,4 +43,4 @@ function Intersection ( { options= defaultOptions,animate= defaultAnimate , chil
 
 };
 
-export default Intersection;
+export default IntersectionAnimate;

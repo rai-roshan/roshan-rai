@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import IntersectionAnimate from "../../components/Intersection";
+import IntersectionAnimate from "../../components/IntersectionAnimate";
 
 const ExperienceCard = () => (
     <div className={"card max-w-sm flex flex-col items-center m-2 p-3"}>

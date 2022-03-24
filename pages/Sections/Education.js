@@ -1,6 +1,6 @@
 import TimelineEvent from "../../components/TimelineEvent";
 import Image from 'next/image';
-import IntersectionAnimate from "../../components/Intersection";
+import IntersectionAnimate from "../../components/IntersectionAnimate";
 
 const EducationCard = ({ institute=null, degree=null, passYear=null, standard=null, board=null, major=null, duration=null, image=null }) => (
     <TimelineEvent>

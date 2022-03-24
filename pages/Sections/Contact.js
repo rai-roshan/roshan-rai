@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import {useRef} from 'react';
-import IntersectionAnimate from "../../components/Intersection";
+import IntersectionAnimate from "../../components/IntersectionAnimate";
 
 const Heading = () => {
     return (

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import IntersectionAnimate from "../../components/Intersection";
+import IntersectionAnimate from "../../components/IntersectionAnimate";
 
 const SkillSetCard = ({ title, children, image, rect=false  }) => {
     return (
