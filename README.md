@@ -34,6 +34,6 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 ## Deployment
-The site is deployed using Vercel. [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- The site is deployed using Vercel. [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- for custom domain, follow [this](https://vercel.com/docs/concepts/projects/domains/add-a-domain) guide, or read more about the domains tech terms [here](https://vercel.com/docs/concepts/projects/domains)  
+- Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
