@@ -1,22 +1,24 @@
 import Image from 'next/image';
 import IntersectionAnimate from "../../components/IntersectionAnimate";
 
-const ExperienceCard = () => (
-    <div className={"card max-w-sm flex flex-col items-center m-2 p-3"}>
+const ExperienceCard = ({ logoImg, backgroundImage, orgName, role, durationText, description }) => (
+    <div className={"card max-w-sm flex flex-col items-center m-2"}>
 
         <div>
-            <Image width={70} height={70} alt={"organization_logo"} src={"/images/GitHub.png"} />
+            { logoImg ? <div className={'pt-3'}><Image width={70} height={70} alt={"organization_logo"} src={`/images/${logoImg}`} /></div> : 
+            <Image alt={"event_picture"} objectFit={"cover"}  width={"500"} height={"200"} src={`/images/${backgroundImage}`} />
+            }
         </div>
-        <div>
-            <h1 className={"font-bold text-2xl"}>GitHub</h1>
+        <div className='p-3'>
+            <h1 className={"font-bold text-2xl"}>{orgName}</h1>
             <p className={"mt-1 text-gray-700"}>
-                <span className={"font-semibold"} >Role</span>: SDE Intern</p>
+                <span className={"font-semibold"} >Role</span>{`: ${role}`}</p>
             <p className={"text-gray-700"}>
-                <span className={"font-semibold"} >Duration</span>: June 2021 to Aug 2021
+                <span className={"font-semibold"} >Duration</span>{`: ${durationText}`}
             </p>
             <p className={"text-gray-700"}>
                 <span className={"font-semibold"} >Description</span>:
-                Worked with GitHub Eduction Team on their product , and contributed to the mission of organization
+                {description}
             </p>
         </div>
 
@@ -62,9 +64,26 @@ export default function Experience() {
                 </div>
                 </IntersectionAnimate>
 
-                <div id={"experienceSection"} className={"flex flex-row justify-center w-full"}>
-                    <IntersectionAnimate animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
-                    <ExperienceCard />
+                <div id={"experienceSection"} className={"flex flex-row flex-wrap justify-center w-full"}>
+                    <IntersectionAnimate 
+                    parentClassName={`flex flex-row`}
+                    animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+                    <ExperienceCard 
+                    backgroundImage={"ZomatoHyperpure.png"}
+                    orgName={"Zomato Hyperpure"}
+                    durationText={"July 2022 to present"}
+                    role={"Software Engineer"}
+                    description={"Working with Hyperpure finance tech team to build inhouse finance system"} />
+                    </IntersectionAnimate>
+                    <IntersectionAnimate 
+                    parentClassName={`flex flex-row`}
+                    animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+                    <ExperienceCard
+                    logoImg={"GitHub.png"}
+                    orgName={"GitHub"}
+                    durationText={"June 2021 to Aug 2021"}
+                    role={"SDE Intern"}
+                    description={"Worked with GitHub Eduction Team on their product , and contributed to the mission of organization"} />
                     </IntersectionAnimate>
                 </div>
 

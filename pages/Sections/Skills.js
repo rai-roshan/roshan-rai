@@ -1,5 +1,5 @@
 import Image from "next/image";
-import IntersectionAnimate from "../../components/IntersectionAnimate";
+import IntersectionAnimate from "../../components/IntersectionAnimate"
 
 const SkillSetCard = ({ title, children, image, rect=false  }) => {
     return (
@@ -22,7 +22,7 @@ const SkillsList = () => {
     return ( <div id="skillList"
                 className={"flex flex-col flex-wrap w-full sm:flex-row justify-center w-100"}>
                 <IntersectionAnimate animate={ { pre: "flex flex-col md:flex-row transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
-                        <SkillSetCard title={"Core Concept"} image={"Linux.png"} rect={true}>
+                        <SkillSetCard title={"Core Concept"} image={"Linx.png"} rect={true}>
                             <p className={"font-medium text-blue-600"}>Data Structures</p>
                             <p className={"font-medium text-blue-600"}>Algorithms</p>
                             <p className={"font-medium text-blue-600"}>Computer Networks</p>
@@ -31,17 +31,18 @@ const SkillsList = () => {
                 </IntersectionAnimate>
                 <IntersectionAnimate animate={ { pre: "flex flex-col md:flex-row transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
                         <SkillSetCard title={"Development"} image={"javascript.png"}>
+                            <p className={"font-medium text-blue-600"}>GoLang</p>
+                            <p className={"font-medium text-blue-600"}>C++</p>
+                            <p className={"font-medium text-blue-600"}>Ruby on Rails</p>
                             <p className={"font-medium text-blue-600"}>JavaScript</p>
                             <p className={"font-medium text-blue-600"}>React JS</p>
-                            <p className={"font-medium text-blue-600"}>React Native</p>
-                            <p className={"font-medium text-blue-600"}>Next JS</p>
                             <p className={"font-medium text-blue-600"}>Node JS</p>
-                            <p className={"font-medium text-blue-600"}>Ruby on Rails</p>
+                            
                         </SkillSetCard>
                 </IntersectionAnimate>
                 <IntersectionAnimate animate={ { pre: "flex flex-col md:flex-row transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
                         <SkillSetCard title={"DBMS"} image={"MongoDB.png"} rect={true}>
-                            <p className={"font-medium text-blue-600"}>SQL</p>
+                            <p className={"font-medium text-blue-600"}>MySql</p>
                             <p className={"font-medium text-blue-600"}>NoSQL</p>
                         </SkillSetCard>
                 </IntersectionAnimate>
@@ -49,6 +50,12 @@ const SkillsList = () => {
                         <SkillSetCard title={"Version Control"} image={"GitHub.png"}>
                             <p className={"font-medium text-blue-600"}>Git</p>
                             <p className={"font-medium text-blue-600"}>GitHub</p>
+                        </SkillSetCard>
+                </IntersectionAnimate>
+                <IntersectionAnimate animate={ { pre: "flex flex-col md:flex-row transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+                        <SkillSetCard title={"Deployment"} image={"AwsLogoSvg.svg"}>
+                            <p className={"font-medium text-blue-600"}>Aws Services</p>
+                            <p className={"font-medium text-blue-600"}>Docker</p>
                         </SkillSetCard>
                 </IntersectionAnimate>
             </div>);

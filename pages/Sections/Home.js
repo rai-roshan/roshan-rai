@@ -37,15 +37,15 @@ export default function Home() {
                     My name is Roshan Rai
                   </h1>
                     <h1 className="title">
-                        Information Technology
-                        <span className="mt-5 block">Final Year Student</span>
+                        Zomato Hyperpure
+                        <span className="mt-5 block">Software Engineer</span>
                     </h1>
                 </div>
             </IntersectionAnimate>
 
             <IntersectionAnimate animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-1" } }>
                 <div className={"flex flex-row justify-center my-5"}>
-                <a href={"/documents/ROSHAN_RAI_RESUME.pdf"}
+                <a href={"/documents/roshan_rai_resume_2023.pdf"}
                    className={"p-btn flex flex-row items-center"}
                 download>
                     <div>Resume</div>

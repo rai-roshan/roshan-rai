@@ -11,7 +11,7 @@ const defaultAnimate = {
     delay : null
 };
 
-function IntersectionAnimate ({ options= defaultOptions,animate= defaultAnimate , children } ) {
+function IntersectionAnimate ({ options= defaultOptions,animate= defaultAnimate , children, parentClassName } ) {
 
     const ref = useRef(null);
     const handleVisible = (entries, observer) => {
@@ -37,7 +37,10 @@ function IntersectionAnimate ({ options= defaultOptions,animate= defaultAnimate 
             };
         },[]);
 
-    return <div ref={ref} className={ animate.pre + " " + animate.delay }>
+    return <div 
+    ref={ref} 
+    
+    className={ animate.pre + " " + animate.delay + " " + parentClassName }>
         { children }
     </div>
 
