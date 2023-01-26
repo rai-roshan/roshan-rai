@@ -22,7 +22,7 @@ const SkillsList = () => {
     return ( <div id="skillList"
                 className={"flex flex-col flex-wrap w-full sm:flex-row justify-center w-100"}>
                 <IntersectionAnimate animate={ { pre: "flex flex-col md:flex-row transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
-                        <SkillSetCard title={"Core Concept"} image={"Linx.png"} rect={true}>
+                        <SkillSetCard title={"Core Concept"} image={"Linux.png"} rect={true}>
                             <p className={"font-medium text-blue-600"}>Data Structures</p>
                             <p className={"font-medium text-blue-600"}>Algorithms</p>
                             <p className={"font-medium text-blue-600"}>Computer Networks</p>
