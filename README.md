@@ -7,6 +7,10 @@
 ```bash
 # to install the dependencies/packages if any
 npm install
+
+# install nect and react
+npm install next react react-dom
+
 # now to start a dev server
 npm run dev
 # or
