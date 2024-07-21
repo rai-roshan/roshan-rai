@@ -50,7 +50,7 @@ export default function Contact() {
             <Heading />
 
             <IntersectionAnimate animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
-            <div className={"flex flex-col mb-12"}>
+            <div className={"flex flex-col mb-12 items-center"}>
                 <Image height={"200"} width={"200"}  alt="deal" src={"/images/undraw_business_deal.svg"} />
                 <div className={"mt-5 bg-white shadow-md rounded-xl p-3 flex flex-col items-center"}>
                     <h1 className={"font-bold text-gray-700 text-3xl text-center"}>
