@@ -45,7 +45,7 @@ export default function Home() {
 
             <IntersectionAnimate animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-1" } }>
                 <div className={"flex flex-row justify-center my-5"}>
-                <a href={"/documents/roshan_rai_resume_2023.pdf"}
+                <a href={"/documents/roshan_rai_2024.pdf"}
                    className={"p-btn flex flex-row items-center"}
                 download>
                     <div>Resume</div>
