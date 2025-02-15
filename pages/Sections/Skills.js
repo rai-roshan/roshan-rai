@@ -27,6 +27,9 @@ const SkillsList = () => {
                             <p className={"font-medium text-blue-600"}>Algorithms</p>
                             <p className={"font-medium text-blue-600"}>Computer Networks</p>
                             <p className={"font-medium text-blue-600"}>Operating System</p>
+                            <p className={"font-medium text-blue-600"}>Concurrency</p>
+                            <p className={"font-medium text-blue-600"}>Distributed Systems</p>
+                            <p className={"font-medium text-blue-600"}>Microservices</p>
                         </SkillSetCard>
                 </IntersectionAnimate>
                 <IntersectionAnimate animate={ { pre: "flex flex-col md:flex-row transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
@@ -37,25 +40,28 @@ const SkillsList = () => {
                             <p className={"font-medium text-blue-600"}>JavaScript</p>
                             <p className={"font-medium text-blue-600"}>React JS</p>
                             <p className={"font-medium text-blue-600"}>Node JS</p>
-                            
                         </SkillSetCard>
                 </IntersectionAnimate>
                 <IntersectionAnimate animate={ { pre: "flex flex-col md:flex-row transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
                         <SkillSetCard title={"DBMS"} image={"MongoDB.png"} rect={true}>
                             <p className={"font-medium text-blue-600"}>MySql</p>
                             <p className={"font-medium text-blue-600"}>NoSQL</p>
+                            <p className={"font-medium text-blue-600"}>Elastic Search</p>
+                        </SkillSetCard>
+                </IntersectionAnimate>
+                <IntersectionAnimate animate={ { pre: "flex flex-col md:flex-row transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+                        <SkillSetCard title={"Stack"} image={"AwsLogoSvg.svg"}>
+                            <p className={"font-medium text-blue-600"}>Aws Services</p>
+                            <p className={"font-medium text-blue-600"}>Docker</p>
+                            <p className={"font-medium text-blue-600"}>Redis</p>
+                            <p className={"font-medium text-blue-600"}>Kafka</p>
+                            <p className={"font-medium text-blue-600"}>Docker</p>
                         </SkillSetCard>
                 </IntersectionAnimate>
                 <IntersectionAnimate animate={ { pre: "flex flex-col md:flex-row transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
                         <SkillSetCard title={"Version Control"} image={"GitHub.png"}>
                             <p className={"font-medium text-blue-600"}>Git</p>
                             <p className={"font-medium text-blue-600"}>GitHub</p>
-                        </SkillSetCard>
-                </IntersectionAnimate>
-                <IntersectionAnimate animate={ { pre: "flex flex-col md:flex-row transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
-                        <SkillSetCard title={"Deployment"} image={"AwsLogoSvg.svg"}>
-                            <p className={"font-medium text-blue-600"}>Aws Services</p>
-                            <p className={"font-medium text-blue-600"}>Docker</p>
                         </SkillSetCard>
                 </IntersectionAnimate>
             </div>);

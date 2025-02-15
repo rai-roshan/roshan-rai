@@ -7,13 +7,13 @@ export default function NavBar() {
                 <a href={"#home"}>Home</a>
             </li>
             <li className="ml-3 pt-2 p-1 border-b-4 border-transparent hover:text-blue-700 hover:border-blue-700">
-                <a href={"#education"}>Education</a>
+                <a href={"#experience"}>Experience</a>
             </li>
             <li className="ml-3 pt-2 p-1 border-b-4 border-transparent hover:text-blue-700 hover:border-blue-700">
                 <a href={"#skills"}>Skills</a>
             </li>
             <li className="ml-3 pt-2 p-1 border-b-4 border-transparent hover:text-blue-700 hover:border-blue-700">
-                <a href={"#experience"}>Experience</a>
+                <a href={"#education"}>Education</a>
             </li>
             <li className="ml-3 pt-2 p-1 border-b-4 border-transparent hover:text-blue-700 hover:border-blue-700">
                 <a href={"#projects"}>Projects</a>

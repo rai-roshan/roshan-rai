@@ -34,10 +34,17 @@ export default function Home() {
             <IntersectionAnimate animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-1" } }>
                 <div>
                     <h1  className="title">
-                    My name is Roshan Rai
+                    This is Roshan Rai
                   </h1>
                     <h1 className="title">
-                        Zomato Hyperpure
+                        <div className="fw-900 flex-center">
+                            <Image
+                            objectFit={"cover"}
+                            width={"50"}
+                            height={"50"}
+                            alt="nutanix logo" src={`/images/nutanix-logo.png`} />
+                            <div>NUTANIX</div>
+                        </div>
                         <span className="mt-5 block">Software Engineer</span>
                     </h1>
                 </div>

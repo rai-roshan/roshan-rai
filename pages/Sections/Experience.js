@@ -2,11 +2,13 @@ import Image from 'next/image';
 import IntersectionAnimate from "../../components/IntersectionAnimate";
 
 const ExperienceCard = ({ logoImg, backgroundImage, orgName, role, durationText, description }) => (
-    <div className={"card max-w-sm flex flex-col items-center m-2"}>
+    <div className={"card max-w-sm flex flex-col items-center m-2 full-h-w-img"}>
 
-        <div>
-            { logoImg ? <div className={'pt-3'}><Image width={70} height={70} alt={"organization_logo"} src={`/images/${logoImg}`} /></div> : 
-            <Image alt={"event_picture"} objectFit={"cover"}  width={"500"} height={"200"} src={`/images/${backgroundImage}`} />
+        <div style={{height: '40%', width: "100%"}}>
+            { logoImg ? <div className={'pt-3'}>
+                <Image width={100} height={100}  alt={"organization_logo"} src={`/images/${logoImg}`} />
+                </div> : 
+            <Image alt={"event_picture"} style={{objectFit: "cover"}}  width={"500"} height={"200"} src={`/images/${backgroundImage}`} />
             }
         </div>
         <div className='p-3'>
@@ -68,27 +70,37 @@ export default function Experience() {
                     <IntersectionAnimate 
                     parentClassName={`flex flex-row`}
                     animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
-                    <ExperienceCard 
-                    backgroundImage={"ZomatoHyperpure.png"}
-                    orgName={"Zomato Hyperpure"}
-                    durationText={"July 2022 to present"}
-                    role={"Software Engineer"}
-                    description={"Working with Hyperpure finance tech team to build inhouse finance system"} />
+                        <ExperienceCard 
+                        backgroundImage={"nutanix-full-logo.png"}
+                        orgName={"Nutanix"}
+                        durationText={"Feb 2025 to Present"}
+                        role={"Member of Technical Staff 2"}
+                        description={"Working with NKP team , to build platform for managing kuberenetes clusters"} />
                     </IntersectionAnimate>
                     <IntersectionAnimate 
                     parentClassName={`flex flex-row`}
                     animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
-                    <ExperienceCard
-                    logoImg={"GitHub.png"}
-                    orgName={"GitHub"}
-                    durationText={"June 2021 to Aug 2021"}
-                    role={"SDE Intern"}
-                    description={"Worked with GitHub Eduction Team on their product , and contributed to the mission of organization"} />
+                        <ExperienceCard 
+                        backgroundImage={"ZomatoHyperpure.png"}
+                        orgName={"Zomato Hyperpure"}
+                        durationText={"July 2022 to Oct 2024"}
+                        role={"Software Engineer"}
+                        description={"Working with Hyperpure finance tech team to build inhouse finance system"} />
+                    </IntersectionAnimate>
+                    <IntersectionAnimate 
+                    parentClassName={`flex flex-row`}
+                    animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
+                        <ExperienceCard
+                        backgroundImage={"Github-logo.webp"}
+                        orgName={"GitHub"}
+                        durationText={"June 2021 to Aug 2021"}
+                        role={"SDE Intern"}
+                        description={"Worked with GitHub Eduction Team on their product , and contributed to the mission of organization"} />
                     </IntersectionAnimate>
                 </div>
 
 
-                <div id={"achivementSection"} className={"flex flex-row flex-wrap justify-around max-w-5xl"}>
+                {/* <div id={"achivementSection"} className={"flex flex-row flex-wrap justify-around max-w-5xl"}>
                     <IntersectionAnimate animate={ { pre: "transparent" , animate: "rai-slide-in" , delay: "animate-delay-half" } }>
                     <AchivementCard
                         title={"Free Your Data Hackathon"}
@@ -107,7 +119,7 @@ export default function Experience() {
                         description={"Solved the problem statement published by the Goverment of GOA."}
                     />
                     </IntersectionAnimate>
-                </div>
+                </div> */}
 
             </div>
 

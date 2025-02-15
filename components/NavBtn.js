@@ -4,9 +4,9 @@ const FullScreenMenu = ({display, closeMenu}) => (
     <div className={`full-menu ${ display != null ? display ? "animate-open-full-nav" : "animate-close-full-nav" : "" }` }>
         <ul>
             <li onClick={ closeMenu } className={"menu-item"}><a href="#home">Home</a></li>
-            <li onClick={ closeMenu } className={"menu-item"}><a href="#education">Education</a></li>
-            <li onClick={ closeMenu } className={"menu-item"}><a href="#skills">Skills</a></li>
             <li onClick={ closeMenu } className={"menu-item"}><a href="#experience">Experience</a></li>
+            <li onClick={ closeMenu } className={"menu-item"}><a href="#skills">Skills</a></li>
+            <li onClick={ closeMenu } className={"menu-item"}><a href="#education">Education</a></li>
             <li onClick={ closeMenu } className={"menu-item"}><a href="#projects">Projects</a></li>
             <li onClick={ closeMenu } className={"menu-item"}><a href="#contact">Contact</a></li>
         </ul>
